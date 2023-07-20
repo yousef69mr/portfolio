@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import Curriculum from '../../assets/yousef_mostafa_cv.pdf'
 export function Header() {
-  const [isActive, setActive] = useState(false)
+  const [isactive, setActive] = useState(false)
 
   function toggleTheme() {
     let html = document.getElementsByTagName('html')[0]
@@ -33,7 +33,7 @@ export function Header() {
         />
         <label htmlFor="switch">Toggle</label>
 
-        <nav className={isActive ? 'active' : ''}>
+        <nav className={isactive ? 'active' : ''}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
@@ -52,12 +52,12 @@ export function Header() {
         </nav>
 
         <div
-          aria-expanded={isActive ? 'true' : 'false'}
+          aria-expanded={isactive ? 'true' : 'false'}
           aria-haspopup="true"
-          aria-label={isActive ? 'Fechar menu' : 'Abrir menu'}
-          className={isActive ? 'menu active' : 'menu'}
+          aria-label={isactive ? 'Fechar menu' : 'Abrir menu'}
+          className={isactive ? 'menu active' : 'menu'}
           onClick={() => {
-            setActive(!isActive)
+            setActive(!isactive)
           }}
         ></div>
       </Router>
