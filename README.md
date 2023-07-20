@@ -1,11 +1,6 @@
-# Portfólio João Túlio
+## Portfolio
 
-Este projeto foi criado com CRA (Create React App).
-
-Este é meu site para me apresentar, aqui coloco minhas habilidades, portfólio, e formas de contato.
-
-
-## Tecnologias usadas:
+## Technologies used:
 - React
 - Typescript
 - Styled Components

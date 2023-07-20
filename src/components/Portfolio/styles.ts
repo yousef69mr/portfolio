@@ -11,26 +11,19 @@ export const Container = styled.section`
   }
 
   .projects{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     gap: 2rem;
     padding: 1rem;
     overflow: hidden;
 
-    .animated{
-      flex-grow:1;
-      flex-shrink:1;
-    }
     .project{
       padding: 2rem 1.8rem;
       background-color: #2b2b2b;
       border-radius: 1.2rem;
       transition: 0.25s;
-      
       display: flex;
-      
-      
       flex-direction: column;
       height: 100%;
       color: #FFF;
@@ -76,7 +69,6 @@ export const Container = styled.section`
         margin-top: auto;
         .tech-list{
           display: flex;
-          flex-wrap:wrap;
           align-items: center;
           gap: 2rem;
           font-size: 1.4rem;
@@ -87,4 +79,15 @@ export const Container = styled.section`
     }
   }
 
+  @media (max-width: 960px){
+    .projects{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 740px){
+    .projects{
+      grid-template-columns: 1fr;
+    }
+  }
 `
